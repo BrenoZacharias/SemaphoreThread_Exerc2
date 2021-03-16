@@ -32,8 +32,7 @@ public class ThreadPratos extends Thread {
 			int tempoPreparo = (int) (Math.random() * 301) + 500;
 			int percentualCozimento = 0;
 			int tempo = 0;
-			while (tempo <= tempoPreparo) {
-				System.out.println("Prato " + id + ", percentual " + percentualCozimento + "%");
+			while (percentualCozimento <= 100) {
 				tempo += 100;
 				try {
 					sleep(100);
@@ -41,8 +40,13 @@ public class ThreadPratos extends Thread {
 					e.printStackTrace();
 				}
 				percentualCozimento = ((tempo * 100) / (tempoPreparo));
+				if(percentualCozimento > 100){
+					System.out.println("Prato " + id + ", percentual 100%");
+				}
+				else{
+					System.out.println("Prato " + id + ", percentual " + percentualCozimento + "%");
+				}
 			}
-			System.out.println("Prato " + id + " de Sopa de Cebola está pronto");
 		}
 
 		else if (id % 2 == 0) {
@@ -50,8 +54,7 @@ public class ThreadPratos extends Thread {
 			int tempoPreparo = (int) (Math.random() * 601) + 600;
 			int percentualCozimento = 0;
 			int tempo = 0;
-			while (tempo <= tempoPreparo) {
-				System.out.println("Prato " + id + ", percentual " + percentualCozimento + "%");
+			while (percentualCozimento <= 100) {
 				tempo += 100;
 				try {
 					sleep(100);
@@ -59,8 +62,13 @@ public class ThreadPratos extends Thread {
 					e.printStackTrace();
 				}
 				percentualCozimento = ((tempo * 100) / (tempoPreparo));
+				if(percentualCozimento>100){
+					System.out.println("Prato " + id + ", percentual 100%");
+				}
+				else{
+					System.out.println("Prato " + id + ", percentual " + percentualCozimento + "%");
+				}
 			}
-			System.out.println("Prato " + id + " de Lasanha a Bolonhesa está pronto");
 		}
 	}
 

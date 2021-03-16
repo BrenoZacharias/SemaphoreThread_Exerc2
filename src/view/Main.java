@@ -15,7 +15,5 @@ public class Main {
 			Thread tPratos = new ThreadPratos(id, semaforo);
 			tPratos.start();
 		}
-		
 	}
-
 }
